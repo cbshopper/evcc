@@ -19,7 +19,7 @@
 
 <script>
 import formatter from "../mixins/formatter";
-import { TRIAL } from "./Sponsor.vue";
+//import { TRIAL } from "./Sponsor.vue";
 
 export default {
 	name: "SponsorTokenExpires",
@@ -34,7 +34,8 @@ export default {
 			return this.fmtTimeAgo(new Date(this.expiresAt) - new Date());
 		},
 		isTrial() {
-			return this.name === TRIAL;
+			return false; //!!!!
+			//	return this.name === TRIAL;
 		},
 	},
 };
