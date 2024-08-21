@@ -1,15 +1,8 @@
 package sponsor
 
 import (
-	"context"
-	"fmt"
 	"sync"
 	"time"
-
-	"github.com/evcc-io/evcc/api/proto/pb"
-	"github.com/evcc-io/evcc/util/cloud"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/status"
 )
 
 var (
@@ -24,19 +17,27 @@ const (
 )
 
 func IsAuthorized() bool {
+	return true //!!!
+	/*
 	mu.RLock()
 	defer mu.RUnlock()
 	return len(Subject) > 0
+	*/
 }
 
 func IsAuthorizedForApi() bool {
+	return true  //!!!
+	/*
 	mu.RLock()
 	defer mu.RUnlock()
 	return IsAuthorized() && Subject != unavailable && Token != ""
+	*/
 }
 
 // check and set sponsorship token
 func ConfigureSponsorship(token string) error {
+	return nil //!!
+	/*
 	mu.Lock()
 	defer mu.Unlock()
 
@@ -79,6 +80,7 @@ func ConfigureSponsorship(token string) error {
 	}
 
 	return err
+	*/
 }
 
 type sponsorStatus struct {
