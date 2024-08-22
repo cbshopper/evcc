@@ -34,7 +34,7 @@ export default {
 			return this.fmtTimeAgo(new Date(this.expiresAt) - new Date());
 		},
 		isTrial() {
-			return false //!!!
+			return false; //!!!
 			//return this.name === TRIAL;
 		},
 	},

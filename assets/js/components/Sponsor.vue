@@ -80,7 +80,7 @@ export default {
 	},
 	computed: {
 		isTrial() {
-			return false  //!!!!
+			return false; //!!!!
 			// return this.name === TRIAL;
 		},
 		isVictronDevice() {
