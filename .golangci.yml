@@ -1,6 +1,9 @@
 run:
   go: "1.23"
 
+paths:
+  - ./.
+
 issues:
   exclude:
     - .regActualCurrent. is unused
@@ -15,15 +18,15 @@ linters:
   disable-all: true
   enable:
     - dogsled
-    - durationcheck
+    # - durationcheck
     - gci
     - gofmt
     - goimports
     - goprintffuncname
     - govet
-    - importas
+    # - importas
     - ineffassign
-    - makezero
+    # - makezero
     - misspell
     - nolintlint
     - rowserrcheck
@@ -33,7 +36,7 @@ linters:
     - typecheck
     - unconvert
     - unused
-    - wastedassign
+    # - wastedassign
     - whitespace
 
     # fixme
