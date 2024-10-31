@@ -48,9 +48,9 @@ func (c *Connection) exec(fun func() ([]byte, error)) ([]byte, error) {
 		time.Sleep(c.delay)
 
 		b, err := fun()
-		if err != nil {
+	//	if err != nil {
 			c.Connection.Close()
-		}
+	//	}
 		return b, err
 	})
 }
